@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+  font-family: "Hedvig Letters Serif";
+  position: relative;
+}
+
+p {
+  font-family: "Hedvig Letters Serif";
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+}
