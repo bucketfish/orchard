@@ -97,7 +97,9 @@ body > img:nth-of-type(8) {
   width: 130px;
 }
 
-
+details {
+    color: white;
+}
 
 #orchardlogobox {
     display: flex;
