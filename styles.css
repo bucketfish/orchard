@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    font-family: "Hedvig Letters Serif";
+    position: relative;
+  }
+
+p {
+    font-family: "Hedvig Letters Serif";
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    font-family: 'Hedvig Letters Serif';
+    cursor: pointer;
+}
+
+#hclogo {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    width: 120px;
+    height: auto;
+}
+
+
+body > img:not(#hclogo) {
+  position: fixed;
+  width: 150px;
+  height: auto;
+}
+
+body > img:nth-of-type(2) { 
+  top: 15%;
+  left: 15%;
+  width: 120px;
+}
+
+body > img:nth-of-type(3) {
+  top: 25%;
+  left: 35%;
+  width: 180px;
+}
+
+body > img:nth-of-type(4) {
+  top: 15%;
+  right: 15%;
+  width: 200px;
+}
+
+body > img:nth-of-type(5) { 
+  bottom: 20%;
+  left: 10%;
+  width: 140px;
+}
+
+body > img:nth-of-type(6) { 
+  bottom: 15%;
+  left: 25%;
+  width: 160px;
+}
+
+body > img:nth-of-type(7) {
+  top: 50%;
+  right: 10%;
+  width: 190px;
+}
+
+body > img:nth-of-type(8) { 
+  bottom: 25%;
+  right: 20%;
+  width: 130px;
+}
+
+
+
+#orchardlogobox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+}
+  
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+
+  #mask0_1496_405 path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 2s ease-in-out forwards;
+  }
+
+  #mask0_1496_405 path:nth-child(1) { animation-delay: 0s; }
+  #mask0_1496_405 path:nth-child(2) { animation-delay: 0.15s; }
+  #mask0_1496_405 path:nth-child(3) { animation-delay: 0.3s; }
+  #mask0_1496_405 path:nth-child(4) { animation-delay: 0.45s; }
+  #mask0_1496_405 path:nth-child(5) { animation-delay: 0.6s; }
+  #mask0_1496_405 path:nth-child(6) { animation-delay: 0.75s; }
+  #mask0_1496_405 path:nth-child(7) { animation-delay: 0.9s; }
+  #mask0_1496_405 path:nth-child(8) { animation-delay: 1.05s; }
+  #mask0_1496_405 path:nth-child(9) { animation-delay: 1.2s; }
+  #mask0_1496_405 path:nth-child(10) { animation-delay: 1.35s; }
+  #mask0_1496_405 path:nth-child(11) { animation-delay: 1.5s; }
+  #mask0_1496_405 path:nth-child(12) { animation-delay: 1.65s; }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+
+footer {
+    text-align: center;
+    width: 100%;
+    margin: 50px;
+}
