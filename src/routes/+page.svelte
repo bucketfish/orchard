@@ -53,17 +53,19 @@
 
 <img src="/assets/hclogo.png" id="hclogo" alt="Hack Club logo" />
 
-{#each stickers as num, i}
-  <img 
-    src="/assets/sticker{num}.png" 
-    alt="sticker" 
-    class="sticker sticker-{num}"
-    style="animation-delay: {stickerDelays[i] ?? 0}s"
-  />
-{/each}
 
 <main>
   <div id="landing">
+     {#each stickers as num, i}
+        <img 
+          src="/assets/sticker{num}.png" 
+          alt="sticker" 
+          class="sticker sticker-{num}"
+          style="animation-delay: {stickerDelays[i] ?? 0}s"
+        />
+      {/each} 
+
+
     <div id="orchardlogobox">
       <svg width="817" height="180" viewBox="0 0 817 180" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="mask0_1496_405" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-1" y="-1" width="818" height="182">
@@ -144,6 +146,59 @@
 			for your efforts, even if you don't win the swift student challenge!
 		</p>
 	</div>
+</div>
+
+
+<div id="infobox">
+    <p>the swift student challenge is a worldwide challenge to student developers! create a 3-minute experience in swift that tells a story or solves a problem in your community.</p>
+    <p>to find out more, visit <a href="https://developer.apple.com/swift-student-challenge/">the official website.</a></p>
+</div>
+
+<div id="prizes">
+    <p class="prizes-intro">tell us about your submitted project to earn free prizes, such as</p>
+    
+    <div class="prizes-grid">
+        <div class="prize-item">
+            <img src="/assets/axolotl-pin.png" alt="enamel pin" class="prize-image" />
+            <p class="prize-label">enamel pins</p>
+        </div>
+        
+        <div class="prize-item">
+            <img src="/assets/apple-gift-card.png" alt="apple store gift card" class="prize-image" />
+            <p class="prize-label">apple store gift card</p>
+        </div>
+        
+        <div class="prize-item">
+            <img src="/assets/arcade-icon.png" alt="apple arcade subscription" class="prize-image" />
+            <p class="prize-label">apple arcade subscription</p>
+        </div>
+        
+        <div class="prize-item">
+            <img src="/assets/tshirt.png" alt="custom t-shirt" class="prize-image" />
+            <p class="prize-label">some custom tshirt design</p>
+        </div>
+    </div>
+    
+    <p class="prizes-more">and more...!</p>
+</div>
+
+<div id="faq">
+    <h2>frequently asked questions</h2>
+    
+    <details class="faq-item">
+        <summary>question?</summary>
+        <p>answer answer answer</p>
+    </details>
+    
+    <details class="faq-item">
+        <summary>question?</summary>
+        <p>answer answer answer</p>
+    </details>
+    
+    <details class="faq-item">
+        <summary>question?</summary>
+        <p>answer answer answer</p>
+    </details>
 </div>
 
 <footer>
@@ -268,44 +323,45 @@
   }
 
   .sticker-1 {
-    top: 10%;
-    left: 15%;
-    /* height: 18vh; */
+    top: 30%;
+    left: 9%;
+    height: 20vh;
   }
 
   .sticker-2 {
-    top: 10%;
-    left: 35%;
+    top: -20%;
+    right: 10%;
     /* height: 12vh; */
   }
 
   .sticker-3 {
-    top: 15%;
-    right: 15%;
-    /* height: 15vh; */
+    top: -35%;
+    right: 40%;
+    height: 20vh;
   }
 
   .sticker-4 {
-    bottom: 70%;
-    left: 10%;
+    bottom: 15%;
+    right: 10%;
+    height: 20vh;
     /* height: 20vh; */
   }
 
   .sticker-5 {
-    bottom: 15%;
-    left: 25%;
+    top: -15%;
+    left: 20%;
     /* height: 15vh; */
   }
 
   .sticker-6 {
-    bottom: 50%;
-    right: 10%;
+    bottom: -20%;
+    right: 20%;
     /* height: 15vh; */
   }
 
   .sticker-7 {
-    bottom: 25%;
-    right: 20%;
+    bottom: -15%;
+    left: 20%;
     /* height: 15vh; */
   }
 
@@ -331,7 +387,7 @@
   }
 
   svg {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
   }
 
@@ -376,7 +432,7 @@
 	.text-right {
 		color: #fff;
 		font-family: serif;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 1.6;
 		padding: 2rem;
 	}
@@ -399,9 +455,143 @@
 
 	.model-wrapper {
 		width: 100%;
-		height: 100%;
+		height: 80%;
 	}
 
+  #infobox {
+    background-color: #d9d9d9;
+    padding: 20px;
+    max-width: 90vw;
+    margin: auto;
+  }
+
+  #infobox p, #infobox a {
+    color: black;
+  }
+
+  #prizes {
+    padding: 80px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 600px;
+  }
+
+  .prizes-intro {
+    font-size: 20px;
+    margin-bottom: 80px;
+    font-family: 'Hedvig Letters Serif', serif;
+    text-align: center;
+  }
+
+  .prizes-grid {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+
+  .prize-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .prize-item:nth-child(1) {
+    top: 0;
+    left: 10%;
+  }
+
+  .prize-item:nth-child(2) {
+    top: 60%;
+    left: 30%;
+    transform: translateY(-50%) rotate(-5deg);
+  }
+
+  .prize-item:nth-child(3) {
+    top: -5%;
+    right: 30%;
+  }
+
+  .prize-item:nth-child(4) {
+    top: 30%;
+    right: 10%;
+  }
+
+  .prize-image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+  }
+
+  .prize-label {
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 16px;
+    max-width: 180px;
+    text-align: center;
+  }
+
+  .prizes-more {
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    right: 15%;
+    font-family: 'Hedvig Letters Serif', serif;
+  }
+
+  #faq {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+  }
+
+  #faq h2 {
+    font-family: 'Hedvig Letters Serif', serif;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: normal;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 0;
+  }
+
+  .faq-item summary {
+    font-family: 'Hedvig Letters Serif', serif;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '˅';
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(180deg);
+  }
+
+  .faq-item p {
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 16px;
+    margin-top: 15px;
+    padding-left: 0;
+    line-height: 1.6;
+  }
 
   @media (max-width: 800px) {
 
@@ -409,44 +599,44 @@
       height: 10vh;
     }
     .sticker-1 {
-      top: 10%;
-      left: 10%;
+      top: -20%;
+      left: 5%;
 
     }
 
     .sticker-2 {
-      top: 5%;
+      top: -15%;
       left: 35%;
 
     }
 
     .sticker-3 {
-      top: 10%;
+      top: -30%;
       right: 10%;
 
     }
 
     .sticker-4 {
-      bottom: 20%;
+      bottom: -30%;
       left: 5%;
 
     }
 
     .sticker-5 {
-      bottom: 12%;
+      top: -30%;
       left: 25%;
 
     }
 
     .sticker-6 {
-      bottom: 20%;
+      bottom: -30%;
       right: 10%;
 
     }
 
     .sticker-7 {
-      bottom: 10%;
-      right: 20%;
+      bottom: -55%;
+      right: 0%;
 
     }
   }

@@ -9,6 +9,8 @@
 	let isDragging = $state(false);
 	let lastMouseX = 0;
 
+	const viewportWidth: number = window.innerWidth;
+
 
 	useTask(() => {
 		if (!isDragging) {
@@ -39,11 +41,21 @@
 	on:pointerup={onPointerUp}
 />
 
-<T.PerspectiveCamera
+
+{#if viewportWidth > 800}
+  <T.PerspectiveCamera
 	makeDefault
 	position={[0, 0, 2]}
 	fov={50}
 />
+{:else}
+  <T.PerspectiveCamera
+	makeDefault
+	position={[0, 0, 10]}
+	fov={50}
+/>
+{/if}
+
 
 
 <T.DirectionalLight position={[5, 5, 5]} intensity={1.5} />
