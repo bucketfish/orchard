@@ -595,6 +595,9 @@
 
   @media (max-width: 800px) {
 
+    #hclogo {
+      position: absolute;
+    }
     .sticker {
       height: 10vh;
     }
@@ -607,7 +610,7 @@
     .sticker-2 {
       top: -15%;
       left: 35%;
-
+      visibility: hidden;
     }
 
     .sticker-3 {
@@ -637,7 +640,98 @@
     .sticker-7 {
       bottom: -55%;
       right: 0%;
+      visibility: hidden;
 
+    }
+
+    .model-container {
+      flex-direction: column;
+      height: auto;
+      min-height: 100vh;
+      padding: 40px 20px;
+      gap: 2rem;
+    }
+
+    .text-left,
+    .text-right {
+      flex: none;
+      max-width: 100%;
+      text-align: center;
+      padding: 1rem;
+      font-size: 14px;
+    }
+
+    .model-wrapper {
+      width: 100%;
+      height: 50vh;
+      padding: -20px;
+      order: 2;
+    }
+
+    .text-left {
+      order: 1;
+    }
+
+    .text-right {
+      order: 3;
+    }
+
+    #prizes {
+      padding: 40px 20px;
+      min-height: auto;
+    }
+
+    .prizes-intro {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .prizes-grid {
+      position: relative;
+      height: auto;
+      min-height: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .prize-item {
+      position: relative;
+      margin-bottom: 40px;
+      transform: none !important;
+    }
+
+    .prize-item:nth-child(1),
+    .prize-item:nth-child(2),
+    .prize-item:nth-child(3),
+    .prize-item:nth-child(4) {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+    }
+
+    .prize-image {
+      width: 140px;
+      height: 140px;
+    }
+
+    .prize-label {
+      font-size: 14px;
+      max-width: 200px;
+    }
+
+    .prizes-more {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    Canvas {
+      max-height: 100px;
     }
   }
 </style>

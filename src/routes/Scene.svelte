@@ -51,7 +51,7 @@
 {:else}
   <T.PerspectiveCamera
 	makeDefault
-	position={[0, 0, 10]}
+	position={[0, 0, 1.5]}
 	fov={50}
 />
 {/if}
