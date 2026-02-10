@@ -17,9 +17,13 @@
   },
   "type": "module",
   "dependencies": {
+    "@rollup/rollup-darwin-x64": "^4.57.1",
     "@threlte/core": "^8.3.1",
     "@threlte/extras": "^9.7.1",
     "@types/three": "^0.182.0",
     "three": "^0.182.0"
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node" 
   }
 }
